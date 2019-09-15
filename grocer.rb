@@ -36,7 +36,7 @@ def apply_clearance(cart)
   # code here
   cart.each do |food, info|
   if cart[food][:clearance]
-      new_price = info[:price] * 0.80
+      new_price = info[:price] 
       info[:price] = new_price.round(2)
     end  
   end  
@@ -53,7 +53,6 @@ def checkout(cart, coupons)
   cart2.each do |name, price|
     total += price[:price] * price[:count]
   end
-  
   
   if total > 100
     total * 0.9

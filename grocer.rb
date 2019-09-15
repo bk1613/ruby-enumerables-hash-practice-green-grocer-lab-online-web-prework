@@ -54,9 +54,9 @@ def checkout(cart, coupons)
     total += price[:price] * price[:count]
   end
   
-  discount = total / 0.1
+  
   if total > 100
-    total = total - (discount)
+    total * 0.9
   else
     total
   end

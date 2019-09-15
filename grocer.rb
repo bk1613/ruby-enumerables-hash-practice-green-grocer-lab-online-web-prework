@@ -50,8 +50,6 @@ def checkout(cart, coupons)
   cart1 = apply_coupons(groceries, coupons)
   cart2 = apply_clearance(cart1)
 
-  total = 0
-
   cart2.each do |name, price|
     total += price[:price] * price[:count]
   end

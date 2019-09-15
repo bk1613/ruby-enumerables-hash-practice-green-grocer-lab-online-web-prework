@@ -56,7 +56,7 @@ def checkout(cart, coupons)
   
   discount = total / 0.1
   if total > 100
-    total - (discount)
+    total = total - (discount)
   else
     total
   end

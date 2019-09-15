@@ -4,7 +4,7 @@ def consolidate_cart(cart)
   cart.each do |items|
     items.each do |key_food, value_info|
       cart_hash[key_food] = value_info
-      cart_hash[key_food][:count] ||= 0
+      
       cart_hash[key_food][:count] += 1
     end
   end  
